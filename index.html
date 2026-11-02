@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Warung Pempek Demo – Pempek khas Palembang</title>
+<meta name="description" content="Proyek konsep: landing page usaha kuliner khas Palembang dengan pemesanan lewat WhatsApp.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap bar">
+    <a class="logo" href="#">Warung Pempek Demo</a>
+    <button class="cart-btn" id="cartBtn" type="button">Pesanan <span id="count">0</span></button>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="wrap">
+      <h1>Pempek khas Palembang, pesan tanpa ribet.</h1>
+      <p>Pilih menu, lihat totalnya, lalu kirim pesanan lewat WhatsApp dalam satu ketukan.</p>
+      <a class="btn" href="#menu">Lihat menu</a>
+      <p class="note">Proyek konsep untuk latihan. Bukan usaha nyata, harga hanya contoh.</p>
+    </div>
+  </section>
+
+  <section id="menu">
+    <div class="wrap">
+      <h2>Menu</h2>
+      <div class="tabs" id="tabs" role="group" aria-label="Kategori menu"></div>
+      <div class="grid" id="grid"></div>
+    </div>
+  </section>
+
+  <section class="info">
+    <div class="wrap info-grid">
+      <div><h3>Jam buka</h3><p>Setiap hari, 09.00 – 21.00 WIB</p></div>
+      <div><h3>Lokasi</h3><p>Jl. Contoh No. 1, Palembang (alamat fiktif)</p></div>
+      <div><h3>Cara pesan</h3><p>Pilih menu, buka Pesanan, lalu tekan tombol WhatsApp.</p></div>
+    </div>
+  </section>
+</main>
+
+<footer><div class="wrap">© 2026 Warung Pempek Demo. Dibuat oleh BAKRI WEB DESIGN sebagai proyek latihan.</div></footer>
+
+<dialog id="dlg">
+  <h2>Pesanan Anda</h2>
+  <ul id="list"></ul>
+  <div class="total"><span>Total</span><strong id="total">Rp0</strong></div>
+  <div class="actions">
+    <button class="btn alt" id="close" type="button">Tutup</button>
+    <a class="btn" id="wa" href="#" target="_blank" rel="noopener">Kirim ke WhatsApp</a>
+  </div>
+</dialog>
+
+<script src="script.js"></script>
+</body>
+</html>
