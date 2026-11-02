@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Warung Pempek Demo – Pempek khas Palembang</title>
-<meta name="description" content="Proyek konsep: landing page usaha kuliner khas Palembang dengan pemesanan lewat WhatsApp.">
+<title>Warung Pempek Demo – Pempek khas Palembang, pesan lewat WhatsApp</title>
+<meta name="description" content="Proyek konsep: website usaha kuliner khas Palembang dengan menu, paket hemat, dan pemesanan lewat WhatsApp.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
@@ -12,41 +12,143 @@
 </head>
 <body>
 
-<header class="top">
+<header class="top" id="top">
   <div class="wrap bar">
-    <a class="logo" href="#">Warung Pempek Demo</a>
-    <button class="cart-btn" id="cartBtn" type="button">Pesanan <span id="count">0</span></button>
+    <a class="logo" href="#beranda">Warung Pempek Demo</a>
+    <nav id="nav" aria-label="Navigasi utama">
+      <a href="#menu">Menu</a>
+      <a href="#paket">Paket</a>
+      <a href="#tentang">Tentang</a>
+      <a href="#testimoni">Testimoni</a>
+      <a href="#faq">FAQ</a>
+      <a href="#kontak">Kontak</a>
+    </nav>
+    <div class="tools">
+      <button class="cart-btn" id="cartBtn" type="button">Pesanan <span id="count">0</span></button>
+      <button class="burger" id="burger" type="button" aria-label="Buka menu" aria-expanded="false" aria-controls="nav"><span></span><span></span><span></span></button>
+    </div>
   </div>
 </header>
 
 <main>
-  <section class="hero">
+  <section class="hero" id="beranda">
     <div class="wrap">
       <h1>Pempek khas Palembang, pesan tanpa ribet.</h1>
-      <p>Pilih menu, lihat totalnya, lalu kirim pesanan lewat WhatsApp dalam satu ketukan.</p>
-      <a class="btn" href="#menu">Lihat menu</a>
-      <p class="note">Proyek konsep untuk latihan. Bukan usaha nyata, harga hanya contoh.</p>
+      <p class="lead">Pilih menu atau paket hemat, lihat totalnya, lalu kirim pesanan lewat WhatsApp dalam satu ketukan.</p>
+      <div class="cta">
+        <a class="btn" href="#menu">Lihat menu</a>
+        <a class="btn alt" href="#paket">Paket hemat</a>
+      </div>
+      <ul class="badges">
+        <li>Dibuat segar setiap hari</li>
+        <li>Cuko racikan sendiri</li>
+        <li>Pesan lewat WhatsApp</li>
+      </ul>
+      <p class="note">Proyek konsep untuk latihan. Bukan usaha nyata, nama dan harga hanya contoh.</p>
     </div>
   </section>
 
-  <section id="menu">
+  <section class="plain">
+    <div class="wrap feats">
+      <div><h3>Bahan pilihan</h3><p>Ikan dan tepung dipilih setiap pagi, supaya rasa dan teksturnya terjaga.</p></div>
+      <div><h3>Cuko racikan sendiri</h3><p>Asam, manis, dan pedasnya diracik dengan takaran tetap, jadi rasanya konsisten.</p></div>
+      <div><h3>Pesan lebih mudah</h3><p>Tanpa tanya-tanya berulang. Menu, harga, dan total langsung terlihat di satu halaman.</p></div>
+    </div>
+  </section>
+
+  <section id="menu" class="cream">
     <div class="wrap">
       <h2>Menu</h2>
+      <p class="sub">Pilih kategori, lalu tekan Tambah untuk memasukkan ke pesanan.</p>
       <div class="tabs" id="tabs" role="group" aria-label="Kategori menu"></div>
       <div class="grid" id="grid"></div>
     </div>
   </section>
 
-  <section class="info">
-    <div class="wrap info-grid">
-      <div><h3>Jam buka</h3><p>Setiap hari, 09.00 – 21.00 WIB</p></div>
-      <div><h3>Lokasi</h3><p>Jl. Contoh No. 1, Palembang (alamat fiktif)</p></div>
-      <div><h3>Cara pesan</h3><p>Pilih menu, buka Pesanan, lalu tekan tombol WhatsApp.</p></div>
+  <section id="paket">
+    <div class="wrap">
+      <h2>Paket hemat</h2>
+      <p class="sub">Untuk keluarga, arisan, atau acara kantor. Pesan paling lambat sehari sebelumnya.</p>
+      <div class="pakets" id="pakets"></div>
+    </div>
+  </section>
+
+  <section class="cream">
+    <div class="wrap">
+      <h2>Cara pesan</h2>
+      <ol class="steps">
+        <li><h3>Pilih menu</h3><p>Tambahkan menu atau paket ke pesanan.</p></li>
+        <li><h3>Cek pesanan</h3><p>Atur jumlah dan lihat total harga.</p></li>
+        <li><h3>Kirim lewat WhatsApp</h3><p>Pesanan tersusun otomatis menjadi pesan.</p></li>
+        <li><h3>Konfirmasi</h3><p>Kami konfirmasi, lalu pesanan diantar atau diambil.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="tentang">
+    <div class="wrap about">
+      <div>
+        <h2>Cerita kami</h2>
+        <p>Warung Pempek Demo berawal dari dapur rumah di Palembang. Resepnya sederhana: ikan yang segar, adonan yang diuleni sampai pas, dan cuko yang rasanya selalu sama dari hari ke hari.</p>
+        <p>Dalam cerita ini, pesanan dulu masuk lewat chat satu per satu. Website ini dibuat supaya pelanggan bisa melihat menu dan harga sendiri, lalu memesan dengan lebih cepat.</p>
+        <p class="fine">Cerita ini fiktif dan dibuat untuk keperluan latihan desain.</p>
+      </div>
+      <ul class="facts">
+        <li><strong>Buka setiap hari</strong><span>Senin sampai Minggu</span></li>
+        <li><strong>Area antar</strong><span>Palembang dan sekitarnya</span></li>
+        <li><strong>Pesanan besar</strong><span>Paket untuk arisan dan kantor</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="testimoni" class="cream">
+    <div class="wrap">
+      <h2>Kata pelanggan</h2>
+      <p class="sub">Contoh testimoni untuk keperluan desain, bukan ulasan nyata.</p>
+      <div class="quotes">
+        <figure><blockquote>Pesannya gampang, tinggal pilih lalu kirim ke WhatsApp. Pempeknya datang masih hangat.</blockquote><figcaption>Rina, ibu rumah tangga</figcaption></figure>
+        <figure><blockquote>Paket arisannya pas untuk sepuluh orang dan harganya jelas dari awal.</blockquote><figcaption>Bu Sari, panitia arisan</figcaption></figure>
+        <figure><blockquote>Cukonya pas, tidak terlalu manis. Cocok untuk makan siang bersama di kantor.</blockquote><figcaption>Dimas, karyawan swasta</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq">
+    <div class="wrap">
+      <h2>Pertanyaan umum</h2>
+      <div class="faq">
+        <details><summary>Jam berapa warung buka?</summary><p>Senin sampai Jumat pukul 09.00–21.00, Sabtu dan Minggu pukul 08.00–22.00 WIB.</p></details>
+        <details><summary>Apakah bisa diantar?</summary><p>Bisa untuk area Palembang dan sekitarnya. Ongkos kirim dikonfirmasi lewat WhatsApp setelah alamat diterima.</p></details>
+        <details><summary>Berapa minimal pemesanan?</summary><p>Tidak ada minimal untuk pesanan satuan. Untuk paket, mohon pesan paling lambat sehari sebelumnya.</p></details>
+        <details><summary>Bagaimana cara membayar?</summary><p>Metode pembayaran disepakati saat konfirmasi pesanan lewat WhatsApp.</p></details>
+        <details><summary>Apakah cuko bisa dibuat kurang pedas?</summary><p>Bisa. Tulis permintaanmu di pesan WhatsApp sebelum dikirim.</p></details>
+        <details><summary>Bagaimana kalau pesanan salah atau terlambat?</summary><p>Hubungi kami lewat WhatsApp, nanti kami bantu cek dan selesaikan.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <section id="kontak" class="red">
+    <div class="wrap contact">
+      <div>
+        <h2>Lapar? Pesan sekarang.</h2>
+        <p class="lead">Pilih menu, kirim pesanan, dan kami konfirmasi secepatnya.</p>
+        <div class="cta"><a class="btn light" href="#menu">Mulai pesan</a></div>
+      </div>
+      <ul class="hours">
+        <li><span>Senin – Jumat</span><strong>09.00 – 21.00</strong></li>
+        <li><span>Sabtu – Minggu</span><strong>08.00 – 22.00</strong></li>
+        <li><span>Alamat</span><strong>Jl. Contoh No. 1, Palembang (fiktif)</strong></li>
+      </ul>
     </div>
   </section>
 </main>
 
-<footer><div class="wrap">© 2026 Warung Pempek Demo. Dibuat oleh BAKRI WEB DESIGN sebagai proyek latihan.</div></footer>
+<footer>
+  <div class="wrap foot">
+    <span>© 2026 Warung Pempek Demo. Proyek latihan oleh BAKRI WEB DESIGN.</span>
+    <span>Semua nama, alamat, harga, dan testimoni adalah contoh.</span>
+  </div>
+</footer>
 
 <dialog id="dlg">
   <h2>Pesanan Anda</h2>
